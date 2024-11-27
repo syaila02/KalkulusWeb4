@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Kalkulus Turunan</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div id="homePage" class="page active">
+        <h1>Web Kalkulus Turunan (Diferensial)</h1>
+        <p>Selamat datang! Klik tombol di bawah untuk memulai materi kalkulus turunan.</p>
+        <button onclick="showMateriPage()">Mulai Materi</button>
+    </div>
+
+    <div id="materiPage" class="page">
+        <h2>Materi Kalkulus Turunan</h2>
+        <button onclick="showAljabar()">Turunan Fungsi Aljabar</button>
+        <button onclick="showEksponensial()">Turunan Fungsi Eksponensial</button>
+        <button onclick="showTrigonometri()">Turunan Fungsi Trigonometri</button>
+        <button onclick="showFungsiPangkat()">Turunan Fungsi \( y = f(x)^{g(x)} \)</button>
+        <button onclick="showLogaritma()">Turunan Fungsi Logaritma</button>
+        <button onclick="showRantai()">Aturan Rantai (Chain Rule)</button>
+        <button onclick="showEksponensialLain()">Turunan Fungsi Eksponensial Lainnya</button>
+    </div>
+
+    <!-- Materi Turunan Fungsi Aljabar -->
+    <div id="aljabarPage" class="page">
+        <h3>Materi: Turunan Fungsi Aljabar</h3>
+        <ul>
+            <li>Turunan fungsi polinomial: Misal f(x) = ax^n, maka turunan f'(x) = n * ax^(n-1).</li>
+            <li>Contoh: f(x) = 3x^2, maka f'(x) = 6x.</li>
+            <li>Penggunaan aturan turunan dasar seperti konstanta, penjumlahan, dan perkalian.</li>
+        </ul>
+        <button onclick="showMateriPage()">Kembali ke Menu Materi</button>
+        <button onclick="startAljabarQuiz()">Mulai Kuis</button>
+    </div>
+
+    <!-- Materi Turunan Fungsi Eksponensial -->
+    <div id="eksponensialPage" class="page">
+        <h3>Materi: Turunan Fungsi Eksponensial</h3>
+        <ul>
+            <li>Jika f(x) = e^x, maka f'(x) = e^x.</li>
+            <li>Jika f(x) = a^x, maka f'(x) = a^x ln(a).</li>
+        </ul>
+        <button onclick="showMateriPage()">Kembali ke Menu Materi</button>
+        <button onclick="startEksponensialQuiz()">Mulai Kuis</button>
+    </div>
+
+    <!-- Materi Turunan Fungsi Trigonometri -->
+    <div id="trigonometriPage" class="page">
+        <h3>Materi: Turunan Fungsi Trigonometri</h3>
+        <ul>
+            <li>Turunan dari \( \sin(x) \) adalah \( \cos(x) \)</li>
+            <li>Turunan dari \( \cos(x) \) adalah \( -\sin(x) \)</li>
+            <li>Turunan dari \( \tan(x) \) adalah \( \sec^2(x) \)</li>
+            <li>Turunan dari \( \sec(x) \) adalah \( \sec(x) \tan(x) \)</li>
+            <li>Turunan dari \( \cot(x) \) adalah \( -\csc^2(x) \)</li>
+        </ul>
+        <button onclick="showMateriPage()">Kembali ke Menu Materi</button>
+        <button onclick="startTrigonometriQuiz()">Mulai Kuis</button>
+    </div>
+
+    <!-- Materi Turunan Fungsi y = f(x)^{g(x)} -->
+    <div id="fungsiPangkatPage" class="page">
+        <h3>Materi: Turunan Fungsi \( y = f(x)^{g(x)} \)</h3>
+        <ul>
+            <li>Untuk turunan fungsi bentuk \( y = f(x)^{g(x)} \), kita menggunakan logaritma dan aturan rantai.</li>
+            <li>Jika \( y = f(x)^{g(x)} \), maka turunan pertama \( y' = f(x)^{g(x)} \left( \frac{g'(x)}{g(x)} + \ln(f(x)) \cdot f'(x) \right) \).</li>
+            <li>Contoh: Jika \( y = x^x \), maka \( y' = x^x \left( 1 + \ln(x) \right) \).</li>
+        </ul>
+        <button onclick="showMateriPage()">Kembali ke Menu Materi</button>
+        <button onclick="startFungsiPangkatQuiz()">Mulai Kuis</button>
+    </div>
+
+    <!-- Materi Turunan Fungsi Logaritma -->
+    <div id="logaritmaPage" class="page">
+        <h3>Materi: Turunan Fungsi Logaritma</h3>
+        <ul>
+            <li>Turunan dari \( \ln(x) \) adalah \( \frac{1}{x} \).</li>
+            <li>Turunan dari \( \log_a(x) \) adalah \( \frac{1}{x \ln(a)} \).</li>
+            <li>Jika \( y = \ln(f(x)) \), maka \( y' = \frac{f'(x)}{f(x)} \).</li>
+        </ul>
+        <button onclick="showMateriPage()">Kembali ke Menu Materi</button>
+        <button onclick="startLogaritmaQuiz()">Mulai Kuis</button>
+    </div>
+
+    <!-- Materi Aturan Rantai -->
+    <div id="rantaiPage" class="page">
+        <h3>Materi: Aturan Rantai (Chain Rule)</h3>
+        <ul>
+            <li>Aturan rantai digunakan untuk turunan fungsi komposit.</li>
+            <li>Jika \( y = f(g(x)) \), maka \( y' = f'(g(x)) \cdot g'(x) \).</li>
+            <li>Contoh: Jika \( y = \sin(x^2) \), maka \( y' = 2x \cos(x^2) \).</li>
+        </ul>
+        <button onclick="showMateriPage()">Kembali ke Menu Materi</button>
+        <button onclick="startRantaiQuiz()">Mulai Kuis</button>
+    </div>
+
+    <!-- Materi Turunan Fungsi Eksponensial Lainnya -->
+    <div id="eksponensialLainPage" class="page">
+        <h3>Materi: Turunan Fungsi Eksponensial Lainnya</h3>
+        <ul>
+            <li>Turunan dari \( e^{f(x)} \) adalah \( e^{f(x)} f'(x) \).</li>
+            <li>Contoh: Jika \( y = e^{x^2} \), maka \( y' = 2x e^{x^2} \).</li>
+        </ul>
+        <button onclick="showMateriPage()">Kembali ke Menu Materi</button>
+        <button onclick="startEksponensialLainQuiz()">Mulai Kuis</button>
+    </div>
+
+    <!-- Kuis Page -->
+    <div id="quizPage" class="page">
+        <h3>Quiz</h3>
+        <div id="quizContent"></div>
+        <div id="timer"></div>
+        <button onclick="submitQuiz()">Submit Kuis</button>
+        <button onclick="goBackToMateri()">Kembali ke Materi</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- Footer dengan informasi Pembuat Web -->
+<footer>
+    <p>Web Kalkulus Turunan ini dibuat oleh:</p>
+    <ul>
+        <li>Syaila Zahwa (9247006111180)</li>
+        <li>Aam Aminah (247006111205)</li>
+        <li>Auliya Nadya Putri (247006111200)</li>
+    </ul>
+</footer>

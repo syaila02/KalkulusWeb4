@@ -1,0 +1,88 @@
+/* Ubah tema menjadi warna pink */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffc0cb; /* Warna pink */
+}
+
+/* Judul dan teks heading */
+h1, h2, h3 {
+    text-align: center;
+    color: #ff69b4; /* Warna pink terang */
+    margin-bottom: 20px;
+}
+
+/* Styling untuk setiap halaman */
+.page {
+    display: none;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Halaman aktif */
+.page.active {
+    display: block;
+    background-color: #ffe4e1; /* Warna pink muda */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tombol navigasi */
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #ff69b4; /* Warna pink terang */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Efek hover pada tombol */
+button:hover {
+    background-color: #ff1493; /* Warna pink gelap */
+}
+
+/* Footer */
+footer {
+    background-color: #ffe4e1; /* Warna pink muda */
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #ff69b4; /* Warna pink terang */
+}
+
+/* Daftar pembuat web di footer */
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    color: #ff1493; /* Warna pink gelap */
+}
+
+footer ul li {
+    padding: 5px;
+}
+
+/* Timer styling */
+#timer {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ff69b4; /* Warna pink terang */
+}
+
+/* Styling untuk konten kuis */
+.quiz-question {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.quiz-question input {
+    margin-right: 10px;
+}
